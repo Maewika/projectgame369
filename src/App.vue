@@ -1,19 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" style="background-image: url('image/2.jpg');">
+    <HelloWorld msg="The Infinity War" />
+    <div class="col-6"><counter label="Restart" /></div>
+    <div class="col-6"><counter label="Attack" /></div>
+    <div class="col-6"><counter label="Special Attack" /></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from "./components/HelloWorld.vue";
+import counter from ".//components/counter.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    counter,
+  },
+  data: function () {
+    return {};
+  },
+
+  methods: {
+    sum(CsButtonValue) {
+      this.total += CsButtonValue;
+    },
+  },
+};
 </script>
 
 <style>
