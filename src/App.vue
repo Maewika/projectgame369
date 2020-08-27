@@ -1,29 +1,18 @@
 <template>
-  <div id="app" style="background-image: url('image/2.jpg');">
-    <HelloWorld msg="The Infinity War" />
-    <div class="col-6"><counter label="Restart" /></div>
-    <div class="col-6"><counter label="Attack" /></div>
-    <div class="col-6"><counter label="Special Attack" /></div>
+<body>
+  <div id="app">
+    <counter msg />
   </div>
+</body>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import counter from ".//components/counter.vue";
+import counter from "./components/counter.vue"
+
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    counter,
-  },
-  data: function () {
-    return {};
-  },
-
-  methods: {
-    sum(CsButtonValue) {
-      this.total += CsButtonValue;
-    },
+   counter,
   },
 };
 </script>
@@ -34,7 +23,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 3em;
+}
+body { 
+  background-image: url("./assets/1.jpg"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
